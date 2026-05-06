@@ -1,5 +1,3 @@
-# WORK IN PROGRESS
-
 import random
 
 suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
