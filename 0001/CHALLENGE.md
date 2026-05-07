@@ -25,12 +25,17 @@ Output: `"1lpp0aca"`
 ## Examples
 
 ```
-encrypt("banana") -> "0n0n0baca"
-encrypt("karaca") -> "0c0r0kaca"
-encrypt("burak") -> "k0r3baca"
-encrypt("alpaca") -> "0c0pl0aca"
+encrypt("banana") ➞ "0n0n0baca"
+encrypt("karaca") ➞ "0c0r0kaca"
+encrypt("burak") ➞ "k0r3baca"
+encrypt("alpaca") ➞ "0c0pl0aca"
 ```
 
 ## Notes
 
 All inputs are strings, no uppercases and all output must be strings.
+
+## Credits
+
+- Original challenge: https://edabit.com/challenge/JzBLDzrcGCzDjkk5n
+- W3Schools
