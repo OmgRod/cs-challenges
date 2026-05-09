@@ -172,74 +172,8 @@ def get_best_hand(cards_array):
     else:
         return "High Card"
 
-# i found out python has tests so thats cool :D
-runtests = input("Run tests? (Y/N): ").upper() == "Y"
-if runtests:
-    assert is_royal_flush([
-        ["Hearts", "10"],
-        ["Hearts", "Jack"],
-        ["Hearts", "Queen"],
-        ["Hearts", "King"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed Royal Flush"
-    assert is_straight_flush([
-        ["Hearts", "Ace"],
-        ["Hearts", "2"],
-        ["Hearts", "3"],
-        ["Hearts", "4"],
-        ["Hearts", "5"]
-    ]) == True, "Failed Straight Flush"
-    assert is_four_of_a_kind([
-        ["Hearts", "10"],
-        ["Diamonds", "10"],
-        ["Clubs", "10"],
-        ["Spades", "10"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed Four of a Kind"
-    assert is_full_house([
-        ["Hearts", "10"],
-        ["Diamonds", "10"],
-        ["Clubs", "10"],
-        ["Spades", "Ace"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed Full House"
-    assert is_flush([
-        ["Hearts", "10"],
-        ["Hearts", "Jack"],
-        ["Hearts", "Queen"],
-        ["Hearts", "King"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed Flush"
-    assert is_straight([
-        ["Hearts", "10"],
-        ["Hearts", "Jack"],
-        ["Hearts", "Queen"],
-        ["Hearts", "King"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed Straight"
-    assert is_three_of_a_kind([
-        ["Hearts", "10"],
-        ["Diamonds", "10"],
-        ["Clubs", "10"],
-        ["Spades", "4"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed Three of a Kind"
-    assert is_two_pair([
-        ["Hearts", "10"],
-        ["Diamonds", "10"],
-        ["Clubs", "4"],
-        ["Spades", "4"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed Two Pair"
-    assert is_one_pair([
-        ["Hearts", "10"],
-        ["Diamonds", "10"],
-        ["Clubs", "3"],
-        ["Spades", "5"],
-        ["Hearts", "Ace"]
-    ]) == True, "Failed One Pair"
-
-cards = generate_cards(5)
-for card in range(len(cards)):
-    print(cards[card][1], "of", cards[card][0])
-print(f"\nSuggested hand: \"{get_best_hand(cards)}\"")
+if __name__ == "__main__":
+    cards = generate_cards(5)
+    for card in cards:
+        print(card[1], "of", card[0])
+    print(f"\nSuggested hand: \"{get_best_hand(cards)}\"")
