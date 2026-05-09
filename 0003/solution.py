@@ -7,4 +7,6 @@ def move(phrase):
         new_phrase += chr(ord(phrase[i]) + 1)
     return new_phrase
 
-print(move("hello bye welcome"))
+if __name__ == "__main__":
+    print("ORIGINAL: ", "hello bye welcome")
+    print("ENCRYPTED: ", move("hello bye welcome"))
